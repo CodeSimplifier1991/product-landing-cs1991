@@ -1,0 +1,9 @@
+/* ------------ START - General styles ------------ */
+html {
+  font-size: 62.5%; /*10px*/
+}
+
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+/* ------------ END - General styles ------------ */
