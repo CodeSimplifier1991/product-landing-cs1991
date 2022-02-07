@@ -101,6 +101,27 @@ body {
 }
 /* ------------ END - HEADER styles ------------ */
 
-/* ------------ START - SECTIONS styles ------------ */
+/* ------------ START - FEATURES styles ------------ */
+.grid {
+  display: grid;
+}
 
-/* ------------ END - SECTIONS styles ------------ */
+/* 2 columns in 768px */
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /*Defines 2 equal columns in screens wider than 768px*/
+  }
+}
+/* 2 columns in 768px */
+
+/* 3 columns in 1024px */
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* 3 columns in 1024px */
+/* ------------ END - FEATURES styles ------------ */
