@@ -106,22 +106,55 @@ body {
   display: grid;
 }
 
+/* Articles */
+.feature {
+  padding: 1rem;
+  gap: 1rem auto; /*R C*/
+  letter-spacing: 1.1px;
+  width: 570px;
+  margin: auto 0;
+}
+
+.feature__img {
+  width: 80px;
+  height: 80px;
+}
+
+.feature__heading {
+  font-size: 3rem;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.feature__content > p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+/* Articles */
+
 /* 2 columns in 768px */
 @media screen and (min-width: 768px) {
   .grid--1x2 {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /*Defines 2 equal columns in screens wider than 768px*/
+    /*Defines 2 equal columns in screens wider than 768px*/
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature {
+    width: 768px;
   }
 }
 /* 2 columns in 768px */
 
 /* 3 columns in 1024px */
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+
+  .feature {
+    width: 1024px;
+  }
+} */
 /* 3 columns in 1024px */
 /* ------------ END - FEATURES styles ------------ */
