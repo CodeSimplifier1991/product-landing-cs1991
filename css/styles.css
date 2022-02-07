@@ -6,6 +6,12 @@
   --color-black: #000;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /*Boxes will be in real size (Padding, margin, border won't be added to the size)*/
+}
+
 html {
   font-size: 62.5%; /*10px*/
 }
@@ -38,4 +44,18 @@ body {
   background: var(--color-primary-hover);
 }
 /* BUTTON */
+
+/* INPUT */
+.email-input {
+  font-size: 2rem;
+  border-radius: 10px;
+  outline: none;
+  padding: 0.8rem 1.2rem;
+  color: var(--color-primary);
+}
+
+::placeholder {
+  color: #afaeb9;
+}
+/* INPUT */
 /* ------------ END - Input-group styles ------------ */
