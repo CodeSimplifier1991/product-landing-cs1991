@@ -4,6 +4,8 @@
   --color-primary-hover: #354f86;
   --color-white: #fff;
   --color-black: #000;
+  --color-border: #ccc;
+  --border-radius: 25px;
 }
 
 *,
@@ -24,7 +26,7 @@ body {
 /* ------------ START - Input-group styles ------------ */
 /* BUTTON */
 .btn {
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   border: 0;
   cursor: pointer;
   font-size: 2rem;
@@ -48,14 +50,34 @@ body {
 /* INPUT */
 .email-input {
   font-size: 2rem;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   outline: none;
-  padding: 0.8rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   color: var(--color-primary);
 }
 
 ::placeholder {
-  color: #afaeb9;
+  color: #92919e;
 }
 /* INPUT */
+
+/* INPUT-Group */
+.input-group {
+  border: 1px solid var(--color-border);
+  display: flex; /*Keeps the input & btn next to each other*/
+  width: 90%;
+  border-radius: var(--border-radius);
+}
+
+.input-group .email-input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+  width: 0; /*If we don't define this value, the input grows out of the input group*/
+}
+
+.input-group .btn {
+  margin: 2px;
+}
+/* INPUT-Group */
 /* ------------ END - Input-group styles ------------ */
