@@ -1,4 +1,11 @@
 /* ------------ START - General styles ------------ */
+:root {
+  --color-primary: #2b406e;
+  --color-primary-hover: #354f86;
+  --color-white: #fff;
+  --color-black: #000;
+}
+
 html {
   font-size: 62.5%; /*10px*/
 }
@@ -7,3 +14,28 @@ body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 /* ------------ END - General styles ------------ */
+
+/* ------------ START - Input-group styles ------------ */
+/* BUTTON */
+.btn {
+  border-radius: 15px;
+  border: 0;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  margin: 1rem auto;
+  padding: 1.2rem 1.5rem; /*V H*/
+  text-transform: uppercase;
+}
+
+.btn--primary {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+/* BUTTON */
+/* ------------ END - Input-group styles ------------ */
