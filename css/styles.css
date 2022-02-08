@@ -2,6 +2,9 @@
 :root {
   --color-primary: #2b406e;
   --color-primary-hover: #354f86;
+  --color-secondary: #1e65ff;
+  --color-secondary-hover: #5181e9;
+  --color-headings: #1b0760;
   --color-white: #fff;
   --color-black: #000;
   --color-border: #ccc;
@@ -168,3 +171,115 @@ body {
   max-width: 570px;
 }
 /* ------------ END - VIDEO SECTION styles ------------ */
+
+/* ------------ START - PLAN CARD styles ------------ */
+/* Structure */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #d8d7d7;
+  overflow: hidden;
+}
+/* Structure */
+
+/* Skins */
+/* HEADER SKIN */
+.card__header,
+.card__body {
+  padding: 2rem 3rem; /*V H*/
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.plan__name {
+  color: var(--color-white);
+  font-size: 2.7rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.plan__price {
+  font-size: 3rem;
+  display: inline-block;
+  margin: 1.5rem 1rem;
+}
+
+.plan__billing-cycle {
+  font-size: 1.6rem;
+  display: inline-block;
+  font-weight: 300;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  display: block;
+}
+/* HEADER SKIN */
+
+/* BODY SKIN */
+.list {
+  list-style: none; /*Removes the bullet points*/
+  padding-left: 0; /*Removes the left padding applied by the browsers*/
+  color: var(--color-headings);
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+}
+
+.plan .card__btn {
+  width: 95%;
+  margin: 1rem auto;
+  font-size: 1.8rem;
+  text-align: center;
+}
+/* BODY SKIN */
+/* Skins */
+
+/* MEDIA */
+@media screen and (min-width: 768px) {
+  .plan__name {
+    font-size: 1.8rem;
+  }
+
+  .plan__price {
+    font-size: 2.5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.9rem;
+  }
+
+  .list--tick .list__item {
+    padding-left: 0;
+  }
+}
+/* MEDIA */
+/* ------------ END - PLAN CARD styles ------------ */
