@@ -158,3 +158,13 @@ body {
 } */
 /* 3 columns in 1024px */
 /* ------------ END - FEATURES styles ------------ */
+
+/* ------------ START - VIDEO SECTION styles ------------ */
+#video {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 80%;
+  height: 315px;
+  max-width: 570px;
+}
+/* ------------ END - VIDEO SECTION styles ------------ */
