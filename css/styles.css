@@ -4,6 +4,8 @@
   --color-primary-hover: #354f86;
   --color-secondary: #1e65ff;
   --color-secondary-hover: #5181e9;
+  --color-accent: #2fa6c4;
+  --color-accent-hover: #25b2d1;
   --color-headings: #1b0760;
   --color-white: #fff;
   --color-black: #000;
@@ -36,6 +38,9 @@ a {
   display: flex;
   justify-content: space-between; /*Pushes the items to the edge of the container*/
   background: #222;
+  padding: 1rem;
+  align-items: center;
+  height: 180px;
 }
 
 li {
@@ -57,12 +62,20 @@ li a:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .nav {
+    height: 120px;
+  }
+
   li {
-    display: inline;
+    display: inline-block;
   }
 
   li a {
     padding: 2.5rem;
+  }
+
+  .list__item .list__link {
+    font-size: 1.8rem;
   }
 }
 /* ------------ END - Navbar styles ------------ */
@@ -86,8 +99,26 @@ li a:hover {
   background: var(--color-primary);
 }
 
+.btn--secondary {
+  color: var(--color-white);
+  background: var(--color-secondary);
+}
+
+.btn--accent {
+  color: var(--color-white);
+  background: var(--color-accent);
+}
+
 .btn--primary:hover {
   background: var(--color-primary-hover);
+}
+
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn--accent:hover {
+  background: var(--color-accent-hover);
 }
 /* BUTTON */
 
@@ -106,10 +137,11 @@ li a:hover {
 
 /* INPUT-Group */
 .input-group {
+  border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
   display: flex; /*Keeps the input & btn next to each other*/
+  margin: 5rem auto;
   width: 80%;
-  border-radius: var(--border-radius);
 }
 
 .input-group .email-input {
@@ -128,7 +160,7 @@ li a:hover {
 /* ------------ END - Input-group styles ------------ */
 
 /* ------------ START - HEADER styles ------------ */
-.header {
+/* .header {
   margin: 3rem auto;
   text-align: center;
 }
@@ -142,7 +174,7 @@ li a:hover {
 
 .header__section .input-group {
   margin: 0 auto;
-}
+} */
 /* ------------ END - HEADER styles ------------ */
 
 /* ------------ START - FEATURES styles ------------ */
@@ -151,17 +183,23 @@ li a:hover {
 }
 
 /* Articles */
+.features {
+  margin: 0 auto;
+  max-width: 570px;
+  padding: 3rem;
+}
+
 .feature {
-  padding: 1rem;
-  gap: 1rem auto; /*R C*/
-  letter-spacing: 1.1px;
-  width: 570px;
-  margin: auto 0;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 5rem;
 }
 
 .feature__img {
-  width: 80px;
   height: 80px;
+  margin-right: 5rem;
+  width: 80px;
 }
 
 .feature__heading {
@@ -185,40 +223,73 @@ li a:hover {
   }
 
   .feature {
-    width: 768px;
+    max-width: 1024px;
+  }
+
+  .feature__img {
+    width: 60px;
+    height: 60px;
+    margin-right: 5rem;
+  }
+
+  .feature__heading {
+    font-size: 2.7rem;
+  }
+
+  .feature__content > p {
+    font-size: 1.6rem;
+    white-space: normal;
   }
 }
 /* 2 columns in 768px */
-
-/* 3 columns in 1024px */
-/* @media screen and (min-width: 1024px) {
-  .grid--1x3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .feature {
-    width: 1024px;
-  }
-} */
-/* 3 columns in 1024px */
 /* ------------ END - FEATURES styles ------------ */
 
 /* ------------ START - VIDEO SECTION styles ------------ */
-#video {
-  margin: 0 auto;
-  margin-top: 2rem;
-  width: 80%;
+.video-section {
+  display: inline-block;
   height: 315px;
+  margin-top: 0;
+  margin: auto;
   max-width: 570px;
+  padding: 1rem;
+  width: 100%;
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .video-section {
+    display: flex;
+    justify-content: center;
+    max-height: 610px;
+    max-width: 1024px;
+  }
+
+  #video {
+    width: 60%;
+    height: 100%;
+  }
 }
 /* ------------ END - VIDEO SECTION styles ------------ */
 
 /* ------------ START - PLAN CARD styles ------------ */
 /* Structure */
+.plan {
+  border: 2px solid red;
+  padding: 10px;
+  max-width: 570px;
+  width: 90%;
+  margin: 5rem auto;
+}
+
 .card {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px #d8d7d7;
   overflow: hidden;
+  margin-bottom: 3rem;
 }
 /* Structure */
 
@@ -236,6 +307,11 @@ li a:hover {
 
 .card--secondary .card__header {
   background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.card--accent .card__header {
+  background: var(--color-accent);
   color: var(--color-white);
 }
 
@@ -277,7 +353,6 @@ li a:hover {
 }
 
 .list--tick {
-  list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
 }
 
