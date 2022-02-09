@@ -23,8 +23,49 @@ html {
 
 body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
 }
 /* ------------ END - General styles ------------ */
+
+/* ------------ START - Navbar styles ------------ */
+.nav {
+  display: flex;
+  justify-content: space-between; /*Pushes the items to the edge of the container*/
+  background: #222;
+}
+
+li {
+  display: block;
+}
+
+li a {
+  display: inline-block;
+  text-align: center;
+  padding: 1rem;
+  width: 30%;
+  white-space: nowrap;
+  color: var(--color-white);
+  transition: color 0.3s;
+}
+
+li a:hover {
+  color: #dfd9d9;
+}
+
+@media screen and (min-width: 768px) {
+  li {
+    display: inline;
+  }
+
+  li a {
+    padding: 2.5rem;
+  }
+}
+/* ------------ END - Navbar styles ------------ */
 
 /* ------------ START - Input-group styles ------------ */
 /* BUTTON */
