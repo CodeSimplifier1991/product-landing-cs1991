@@ -30,6 +30,7 @@ body {
 
 a {
   text-decoration: none;
+  margin: 0;
 }
 /* ------------ END - General styles ------------ */
 
@@ -422,7 +423,7 @@ li a:hover {
 /* ------------ END - PLAN CARD styles ------------ */
 
 /* ------------ START - FOOTER styles ------------ */
-/* BLOCK */
+/* Footer*/
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
@@ -433,14 +434,24 @@ li a:hover {
   color: #8d99a0; /*Changes the fonts*/
 }
 
+.footer {
+  background: #232323;
+}
+/* Footer*/
+
+/* Footer > Div */
 .container {
   max-width: 570px;
   margin: 0 auto;
   padding: 1rem;
 }
-/* BLOCK */
 
-/* COLLAPSIBLE */
+.footer__section {
+  padding: 2rem;
+}
+/* Footer > Div */
+
+/* Footer > Div > Section */
 .collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
 }
@@ -466,11 +477,7 @@ li a:hover {
   transform: all 0.3;
   opacity: 0;
 }
-/* COLLAPSIBLE */
-
-.footer {
-  background: #232323;
-}
+/* Footer > Div > Section */
 
 .footer a {
   color: #777;
@@ -479,10 +486,6 @@ li a:hover {
 
 .footer a:hover {
   color: var(--color-white);
-}
-
-.footer__section {
-  padding: 2rem;
 }
 
 .footer__heading {
@@ -522,101 +525,39 @@ li a:hover {
 /* ICON */
 
 /* Media */
-@media screen and(min-width: 768px) {
-  .block {
-    --padding-vertical: 6rem;
-    padding: var(--padding-vertical) 2rem;
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    border: 1px solid red;
+    max-width: 1344px;
   }
 
-  .container {
-    border: 10px solid red;
-    background: white;
-    max-width: 570px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  /* BLOCK */
-
-  /* COLLAPSIBLE */
-  .collapsible--expanded .collapsible__chevron {
-    transform: rotate(0);
+  .footer .collapsible__chevron {
+    display: none; /*Removes the chevron in wide screens*/
   }
 
-  .collapsible--expanded .collapsible__content {
-    max-height: 100vh;
+  .footer .collapsible__content {
     opacity: 1;
-  }
-
-  .collapsible__header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .collapsible__chevron {
-    transform: rotate(-90deg);
-    transition: transform 0.3s;
-  }
-
-  .collapsible__content {
-    max-height: 0;
-    overflow: hidden;
-    transform: all 0.3;
-    opacity: 0;
-  }
-  /* COLLAPSIBLE */
-
-  .footer {
-    background: #232323;
-  }
-
-  .footer a {
-    color: #777;
-    transition: color 0.3s;
-  }
-
-  .footer a:hover {
-    color: var(--color-white);
-  }
-
-  .footer__section {
-    padding: 2rem;
+    max-height: 100%;
   }
 
   .footer__heading {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
-  .footer__section .list {
-    margin: 0;
-  }
-
-  /* LIST */
   .footer .list {
-    display: inline-block;
-    padding: 0;
-    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellow;
+    margin-left: 0;
   }
 
   .list a {
     display: inline-block;
-    font-size: 1.9rem;
-    margin: 0.5rem 0;
+    font-size: 1.7rem;
+    margin: 0;
     text-decoration: none;
   }
-  /* LIST */
-
-  /* ICON */
-  .icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .icon--white {
-    fill: var(--color-white);
-  }
-  /* ICON */
 }
 /* Media */
 /* ------------ END - FOOTER styles ------------ */
