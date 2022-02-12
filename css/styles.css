@@ -35,9 +35,16 @@ a {
 /* ------------ END - General styles ------------ */
 
 /* ------------ START - Navbar styles ------------ */
+.nav__bar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .nav {
   display: flex;
-  justify-content: space-between; /*Pushes the items to the edge of the container*/
+  justify-content: space-between; /* Pushes the items to the edge of the container */
   background: #222;
   padding: 1rem;
   align-items: center;
@@ -75,13 +82,18 @@ li a:hover {
     padding: 2.5rem;
   }
 
-  .list__item .list__link {
+  .list__item .nav-link {
     font-size: 1.8rem;
   }
 }
 /* ------------ END - Navbar styles ------------ */
 
 /* ------------ START - Input-group styles ------------ */
+#form {
+  display: flex;
+  flex-grow: 1;
+}
+
 /* BUTTON */
 .btn {
   border-radius: var(--border-radius);
@@ -159,24 +171,6 @@ li a:hover {
 }
 /* INPUT-Group */
 /* ------------ END - Input-group styles ------------ */
-
-/* ------------ START - HEADER styles ------------ */
-/* .header {
-  margin: 3rem auto;
-  text-align: center;
-}
-
-.header__heading {
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-
-.header__section .input-group {
-  margin: 0 auto;
-} */
-/* ------------ END - HEADER styles ------------ */
 
 /* ------------ START - FEATURES styles ------------ */
 .grid {
@@ -474,7 +468,7 @@ li a:hover {
 .collapsible__content {
   max-height: 0;
   overflow: hidden;
-  transform: all 0.3;
+  /* transform: color 0.3; */
   opacity: 0;
 }
 /* Footer > Div > Section */
@@ -528,7 +522,6 @@ li a:hover {
 @media screen and (min-width: 768px) {
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    border: 1px solid red;
     max-width: 1344px;
   }
 
@@ -548,7 +541,6 @@ li a:hover {
   .footer .list {
     display: flex;
     flex-direction: column;
-    border: 1px solid yellow;
     margin-left: 0;
   }
 
